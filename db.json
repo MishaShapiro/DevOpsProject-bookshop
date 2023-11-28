@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "mail": "Mikhail",
+      "pass": "123",
+      "birth": "2004-04-28"
+    },
+    {
+      "mail": "123",
+      "pass": "123",
+      "birth": "2023-11-16",
+      "id": 2
+    },
+    {
+      "mail": "Arina",
+      "pass": "qwerty",
+      "birth": "2004-04-11",
+      "id": 3
+    }
+  ]
+}

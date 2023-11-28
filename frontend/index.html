@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./authorization.css">
+    <title>Bookshop</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="head">Sign-in</h1>
+        <div class="mainspace">
+            <p class="element lable">Mail: </p>
+            <input class="element input" type="text" placeholder="Your mail" autocomplete="new-password" />
+            <p class="element lable">Password: </p>
+            <input class="element input" type="password" placeholder="password" autocomplete="new-password" />
+            <a class="regist_authoriz" href="./registration.html">Sign-up</a>
+        </div>
+        <button id="btn">Send</button>
+    </div>
+    <div class="errorWindows">
+        <h1>Error</h1>
+        <p class="errorMessange"></p>
+    </div>
+    <script>
+        function showError(mess) {
+            function listRemove() {
+                errWin.classList.remove("errorWindows_active")
+            }
+
+            const errWin = document.querySelector(".errorWindows")
+            const errMess = document.querySelector(".errorMessange")
+            errWin.classList.add("errorWindows_active")
+            setTimeout(listRemove, 3000)
+            errMess.innerHTML = mess
+        }
+
+        const btn = document.querySelector("#btn")
+        const inputs = document.querySelectorAll(".input")
+        btn.addEventListener("click", () => {
+            fetch(`../main?mail=${inputs[0].value}&password=${inputs[1].value}`, {
+                method: "GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then((data) => {return {json: data.json(), data: data}})
+            .then((data) => {
+                if (data.data.status === 200) {
+                    document.location = "./main.html"
+                } else if (data.data.status === 401 || data.data.status === 503) {
+                    data.json.then((text) => {
+                        showError(text)
+                    })
+                }
+            })
+            .catch(() => {
+                showError("Server error")
+            })
+        })
+    </script>
+</body>
+</html>

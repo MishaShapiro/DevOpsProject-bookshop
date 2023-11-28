@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <title>Bookshop</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <p class="container__name">
+                Bookshop
+            </p>
+            <nav class="container__links">
+                <ul id="links">
+                    <li class="links__link links__link_active"><a href="">books</a></li>
+                    <li class="links__link"><a href="">audiobooks</a></li>
+                    <li class="links__link"><a href="">Stationery & gifts</a></li>
+                    <li class="links__link"><a href="">blog</a></li>
+                </ul>
+            </nav>
+            <div class="container__icons">
+                <div  id="icon_user"  class="icons">
+                    <img src="images/user.svg" alt="">
+                </div>
+                <div id="icon_search" class="icons">
+                    <img src="images/search.svg" alt="">
+                </div>
+                <div id="icon_shopbag_cont">
+                    <div id="icon_shopbag" class="icons">
+                        <img src="images/shop bag.svg" alt="">
+                    </div>
+                    <div id="icon_circle" class="icons icons_circle_1 icon_circle_active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13 13" fill="none">
+                            <circle cx="6.5" cy="6.5" r="6.5" fill="#FF353A"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="slider">
+                        <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/banner.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/banner 2.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/banner 3.png" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="books">
+            <nav class="books__nav">
+                <ul class="books__elements">
+                    <li class="books__theam books__theam_active">Architecture</li>
+                    <li class="books__theam">Art & Fashion</li>
+                    <li class="books__theam">Biography</li>
+                    <li class="books__theam">Business</li>
+                    <li class="books__theam">Crafts & Hobbies</li>
+                    <li class="books__theam">Drama</li>
+                    <li class="books__theam">Fiction</li>
+                    <li class="books__theam">Food & Drink</li>
+                    <li class="books__theam">Health & Wellbeing</li>
+                    <li class="books__theam">History & Politics</li>
+                    <li class="books__theam">Humor</li>
+                    <li class="books__theam">Poetry</li>
+                    <li class="books__theam">Psychology</li>
+                    <li class="books__theam">Science</li>
+                    <li class="books__theam">Technology</li>
+                    <li class="books__theam">Travel & Maps</li>
+                </ul>
+            </nav>
+            <div>
+                <div class="books__container" data-count="0"></div>
+                <div class="windows8">
+                    <div class="wBall" id="wBall_1">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_2">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_3">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_4">
+                        <div class="wInnerBall"></div>
+                    </div>
+                    <div class="wBall" id="wBall_5">
+                        <div class="wInnerBall"></div>
+                    </div>
+                </div>
+                <div class="newloader">
+                    <button class="newloader__btn standartbtn">Load more</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="dist/index.js"></script>
+    <script type="module" src="scripts/swiper.js"></script>
+</html>
