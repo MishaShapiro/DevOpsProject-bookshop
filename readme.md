@@ -1,6 +1,8 @@
 # Технологии: 
 **Frontend** - нативный JS 
+
 **Backend** - express
+
 **DataBase** - json-server - Моксервер, не совсем реальная база данных, но рабочая и довольно простая
 
 # Запуск проекта:
@@ -11,6 +13,7 @@
 Если нужно запустить отдельно DB, отдельно Front + Back:
 
 `npm run start` - Front + Back
+
 `npm run dbstart` - DB
 
 # Изменение данных в DB
@@ -20,5 +23,7 @@
 # Ссылки
 
 Само приложение на `http://localhost:5000`
+
 DB на `http://localhost:3000`
+
 Таблица users на `http://localhost:3000/users`
